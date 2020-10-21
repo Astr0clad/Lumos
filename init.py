@@ -1,6 +1,19 @@
 import os
 import main
 import commands
+import pickle
+
+userInfo = {
+	"usrName" = "you have not set a name yet"
+}
+
+usrName = input('what is your name?')
+
+with open('info.pkl', 'wb') as a:
+    pickle.dump(usrName, a)
+
+print('saved data')
+
 
 if __name__ == '__main__': 
 	clear = lambda: os.system('cls') 
