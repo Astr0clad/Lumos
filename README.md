@@ -3,7 +3,7 @@ A python virtual assistant written solely by Astr0clad
 
 To install:
 
-1. Clone the repository OR download and extract the zip (from the releases)
+1. Clone the repository OR download and extract the zip (from the [releases](https://github.com/Astr0clad/Lumos/releases))
 
 2. Go into commands.py and change all of the filepaths that have username in them to your username
 
