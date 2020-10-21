@@ -39,7 +39,7 @@ def wishMe():
 	
 
 def usrname(): 
-	uname = "Colin" 
+	uname = "User" 
 	speak("Welcome "+uname) 
 	columns = shutil.get_terminal_size().columns 
 	
