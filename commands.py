@@ -31,11 +31,6 @@ def cmds():
     while True: 
             
         query = main.takeCommand().lower() 
-        
-        # All the commands said by user will be 
-        # stored here in 'query' and will be 
-        # converted to lower case for easily 
-        # recognition of command 
 
         if "lumos" in query:
             query.replace("lumos", "")
@@ -160,7 +155,7 @@ def cmds():
             elif "write a note" in query: 
                 main.speak("What should i write") 
                 note = takeCommand() 
-                file = open('notes.txt', 'w') 
+                file = open('lumosNotes.txt', 'w') 
                 main.speak("Should i include date and time") 
                 snfm = takeCommand() 
                 if 'yes' in snfm or 'sure' in snfm: 
@@ -173,7 +168,7 @@ def cmds():
             
             elif "show note" in query: 
                 main.speak("Showing Notes") 
-                file = open("notes.txt", "r") 
+                file = open("lumosNotes.txt", "r") 
                 print(file.read()) 
                 main.speak(file.read(6)) 
 

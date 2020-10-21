@@ -1,28 +1,14 @@
 import subprocess 
 import pyttsx3 
-import tkinter 
-import json 
-import random 
-import operator 
 import speech_recognition as sr 
-import datetime 
-import wikipedia 
-import webbrowser 
 import os 
 import winshell 
-import pyjokes 
 import feedparser 
 import smtplib 
 import ctypes 
-import time 
-import requests 
 import shutil 
-import wolframalpha
+import datetime
 from clint.textui import progress 
-from bs4 import BeautifulSoup 
-import win32com.client as wincl 
-from urllib.request import urlopen
-from googlesearch import search
 import commands
 
 engine = pyttsx3.init('sapi5') 
@@ -88,14 +74,3 @@ def takeCommand():
 		return "None"
 	
 	return query 
-
-if __name__ == '__main__': 
-	clear = lambda: os.system('cls') 
-	
-	# This Function will clean any 
-	# command before execution of this python file 
-	clear() 
-	wishMe() 
-	usrname() 
-
-	commands.cmds()
