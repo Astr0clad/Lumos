@@ -7,7 +7,8 @@ userInfo = {
 	"usrName" = "you have not set a name yet"
 }
 
-usrName = input('what is your name?')
+speak("What should i call you \n")
+usrName = takeCommand()
 
 with open('info.pkl', 'wb') as a:
     pickle.dump(usrName, a)
