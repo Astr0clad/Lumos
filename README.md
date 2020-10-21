@@ -5,7 +5,9 @@ To install:
 
 1. Clone the repository OR download and extract the zip
 
-2. Run init.py using Python 3.6
+2. Go into commands.py and change all of the filepaths that have username in them to your username
+
+3. Run init.py using Python 3.6
 
 (Make sure you have all the libraries installed for Python 3.6 first)
 
