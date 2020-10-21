@@ -1,5 +1,6 @@
-import main
 import os
+import main
+import commands
 
 if __name__ == '__main__': 
 	clear = lambda: os.system('cls') 
@@ -10,4 +11,4 @@ if __name__ == '__main__':
 	main.wishMe() 
 	main.usrname() 
 
-	main.commands.cmds()
+	commands.cmds()

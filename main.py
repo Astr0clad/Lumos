@@ -58,11 +58,11 @@ def takeCommand():
 	r = sr.Recognizer() 
 	
 	with sr.Microphone(device_index=2) as source: 
-		
+		r.adjust_for_ambient_noise(source)
+
 		print("Listening...") 
 		r.pause_threshold = 0.5
 		audio = r.listen(source) 
-
 	try: 
 		print("Recognizing...")	 
 		query = r.recognize_google(audio, language ='en-in') 

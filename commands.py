@@ -187,13 +187,15 @@ def cmds():
             elif "what is" or "who is" in query:
                 main.speak('thinking')
                 if "lumos" in query:
-                    query.replace("lumos", "")
+                    query = query.replace("lumos", "")
+                    print(query)
 
                 client = wolframalpha.Client("UK8JT2-ATP7JRHVYR")
-                res = client.query(query)
+                res = client.query(str(query))
 
                 try: 
                     print(next(res.results).text)
                     main.speak(next(res.results).text)
-                except StopIteration:
+                except Exception:
                     print("No results")
+                    main.speak("Im sorry, i dont know that one")
