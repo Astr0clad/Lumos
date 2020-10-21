@@ -54,12 +54,12 @@ def cmds():
 
             elif 'open discord' in query: 
                 main.speak("Here you go to discord\n") 
-                codePath = r"C:\\Users\\Colin\\AppData\\Local\\Discord\\Update.exe"
+                codePath = r"C:\\Users\\Username\\AppData\\Local\\Discord\\Update.exe"
                 os.startfile(codePath) 
 
             elif 'open spotify' in query: 
                 main.speak("Here you go to spotify\n") 
-                codePath = r"C:\\Users\\Colin\\AppData\\Roaming\\Spotify\\spotify.exe"
+                codePath = r"C:\\Users\\Username\\AppData\\Roaming\\Spotify\\spotify.exe"
                 os.startfile(codePath) 
 
             elif 'open stackoverflow' in query: 
