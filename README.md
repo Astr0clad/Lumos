@@ -26,4 +26,4 @@ Then you will need to go to main.py and in line 60 change the device index to yo
 
 If you have any issues please use the issues tab.
 
-If you want to pull request please make a new branch with your name in it.
+If you want to pull request please make a new branch with your name in it. Also add the appropriate label such as enhancement or duplicate. Thank you.
