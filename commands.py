@@ -4,6 +4,8 @@ import tkinter
 import json 
 import random 
 import operator 
+import chatterbot
+from chatterbot import chatbot
 import speech_recognition as sr 
 import datetime 
 import wikipedia 
@@ -24,8 +26,14 @@ import win32com.client as wincl
 from urllib.request import urlopen
 from googlesearch import search
 import main
+from chatterbot.trainers import ListTrainer
+chatbot = ChatBot("Lumos")
+
+trainer = ListTrainer(chatbot)
 
 webbrowser.register('chrome', None, "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe")
+
+speechmode = False
 
 def cmds():
     while True: 
@@ -34,6 +42,14 @@ def cmds():
 
         if "lumos" in query:
             query.replace("lumos", "")
+            
+            if "talk to me" in query:
+                print("enabled speech mode")
+                speechmode = True
+                
+            if "stop talking" in query:
+                print("disabled speech mode")
+                speechmode = False
 
             if 'wikipedia' in query: 
                 main.speak('Searching Wikipedia...') 
@@ -199,3 +215,9 @@ def cmds():
                 except Exception:
                     print("No results")
                     main.speak("Im sorry, i dont know that one")
+                   
+                
+        elif speechmode == True:
+            chabbot.get_response(query)
+            main.speak(query)
+            
