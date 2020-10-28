@@ -218,6 +218,6 @@ def cmds():
                    
                 
         elif speechmode == True:
-            chabbot.get_response(query)
+            chatbot.get_response(query)
             main.speak(query)
             
